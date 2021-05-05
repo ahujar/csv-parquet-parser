@@ -1,0 +1,47 @@
+{
+  "name": "AusNews",
+  "type": "record",
+  "namespace": "com.nuix.avro",
+  "fields": [
+    {
+      "name": "rating",
+       "type": [
+                  "null",
+                  "float"
+                ],
+                "default": null
+    },
+    {
+      "name": "news_agency",
+       "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+    },
+    {
+      "name": "link",
+       "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+    },
+    {
+      "name": "title",
+       "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+    },
+    {
+      "name": "page_views",
+       "type": [
+                  "null",
+                  "int"
+                ],
+                "default": null
+    }
+  ]
+}

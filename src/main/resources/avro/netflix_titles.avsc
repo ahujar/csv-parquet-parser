@@ -1,0 +1,94 @@
+{
+  "name": "NetflixTitles",
+  "type": "record",
+  "namespace": "com.nuix.avro",
+  "fields": [
+    {
+      "name": "show_id",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+    },
+    {
+      "name": "title",
+      "type":"string"
+    },
+    {
+      "name": "director",
+      "type": [
+            "null",
+            "string"
+          ],
+       "default": null
+    },
+    {
+      "name": "cast",
+      "type": [
+                  "null",
+                  "string"
+                ],
+       "default": null
+    },
+    {
+      "name": "country",
+       "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+    },
+    {
+      "name": "date_added",
+      "type" : ["null",{
+            "type" : "int",
+            "logicalType": "date"
+          }]
+    },
+    {
+      "name": "release_year",
+       "type": [
+                  "null",
+                  "int"
+                ],
+                "default": null
+    },
+    {
+      "name": "rating",
+      "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+    },
+    {
+      "name": "duration",
+       "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+    },
+    {
+      "name": "listed_in",
+       "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+    },
+    {
+      "name": "description",
+      "type": [
+                 "null",
+                 "string"
+               ],
+               "default": null
+    }
+  ]
+}

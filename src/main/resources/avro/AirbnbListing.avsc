@@ -1,0 +1,134 @@
+{
+  "name": "AirbnbListing",
+  "type": "record",
+  "namespace": "com.nuix.avro",
+  "fields": [
+    {
+      "name": "id",
+       "type": [
+                        "null",
+                        "int"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "name",
+       "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "host_id",
+      "type": [
+                       "null",
+                       "int"
+                     ],
+                     "default": null
+    },
+    {
+      "name": "host_name",
+       "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "neighbourhood_group",
+       "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "neighbourhood",
+       "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "latitude",
+       "type": [
+                        "null",
+                        "float"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "longitude",
+       "type": [
+                        "null",
+                        "float"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "room_type",
+       "type": [
+                        "null",
+                        "string"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "price",
+       "type": [
+                        "null",
+                        "float"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "minimum_nights",
+       "type": [
+                        "null",
+                        "int"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "number_of_reviews",
+       "type": [
+                        "null",
+                        "int"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "last_review",
+      "type" : ["null",{
+                  "type" : "int",
+                  "logicalType": "date"
+                }]
+    },
+    {
+      "name": "reviews_per_month",
+       "type": [
+                        "null",
+                        "float"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "calculated_host_listings_count",
+       "type": [
+                        "null",
+                        "int"
+                      ],
+                      "default": null
+    },
+    {
+      "name": "availability_365",
+       "type": [
+                        "null",
+                        "int"
+                      ],
+                      "default": null
+    }
+  ]
+}
