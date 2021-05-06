@@ -11,7 +11,7 @@ import java.time.format.DateTimeParseException;
 @Slf4j
 public class LocalDateConversion implements Conversion<String, LocalDate> {
 
-    private String[] formats = {"dd/mm/yyyy"};
+    private String[] formats = {"dd/MM/yyyy"};
 
     public LocalDateConversion(String[] format) {
         if (format.length > 0) {

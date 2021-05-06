@@ -29,7 +29,7 @@ public class CsvToParquetParser<T> {
 
     public MetaData<T> toParquet(InputStream isr, String searchString) throws IOException {
         CsvRoutines csvRoutines = csvToParquetConfig.csvRoutines(metaData.isHeaderExtractionEnabled());
-        try (ParquetWriter<T> writer = csvToParquetConfig.<T>avroParquetWriter(metaData.getSchemaFilePath(), metaData.getOutputfileName());
+        try (ParquetWriter<T> writer = csvToParquetConfig.<T>avroParquetWriter(metaData.getSchemaFilePath(), metaData.getOutputfileName(), tClass);
         ) {
             for (T obj : csvRoutines.iterate(tClass, isr)) {
                 boolean matches = obj.toString().matches(generateRegex(searchString));

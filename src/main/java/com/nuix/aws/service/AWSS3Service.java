@@ -5,6 +5,7 @@ import com.amazonaws.services.s3.model.PutObjectResult;
 import com.nuix.aws.config.AWSConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.configuration2.PropertiesConfiguration;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -27,9 +28,8 @@ public class AWSS3Service {
     }
 
     public ZipFile downloadZipFileFromBucket(String fileName, String bucketName) throws IOException {
-        Path path = Paths.get(fileName);
-        Files.deleteIfExists(path);
-        File file = path.toFile();
+        File file = Paths.get(fileName).toFile();
+        FileUtils.deleteQuietly(file);
         InputStream inputStream = amazonS3.getObject(bucketName, fileName).getObjectContent().getDelegateStream();
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         fileOutputStream.getChannel().transferFrom(Channels.newChannel(inputStream), 0, Long.MAX_VALUE);
